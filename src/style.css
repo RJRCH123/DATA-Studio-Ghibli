@@ -106,7 +106,6 @@ body {
 #Juegos{
   display: none;
   padding: 0;
-  height: 1000px;
   font-family:'Poppins', sans-serif;
 }
 
@@ -153,7 +152,7 @@ body {
 .redSocial{
   width: 1.125rem;
 }
-/************** PAGINA HOME ***************/
+/************** PAGE HOME ***************/
 
 /************** BOX WELCOME**************/
 .LogoWelcome{
@@ -174,7 +173,6 @@ body {
 
 .BoxWelcome {
   display: grid;
-
 
 }
 
@@ -197,7 +195,7 @@ body {
 
 /************** BOX SLIDE **************/
 
-* {box-sizing:border-box}
+/* {box-sizing:border-box}*/
 
 .BoxSlider {
   background-color: rgba(0, 0, 0, 0.767);
@@ -249,7 +247,7 @@ body {
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 15px;
+  font-size: 20px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
@@ -260,7 +258,7 @@ body {
 /* Number text */
 .numbertext {
   color: #f2f2f2;
-  font-size: 12px;
+  font-size: larger;
   padding: 8px 5px;
   margin: 20px 50px;
   position: absolute;
@@ -306,7 +304,7 @@ body {
   to {opacity: 1}
 }
 
-/************PÁGINA ABOUT US *****************/
+/************PAGE ABOUT US *****************/
 
 .container2 {
   display: grid;
@@ -402,3 +400,177 @@ body {
   padding-right: 8%;
 }
 
+
+/************** PAGE MOVIES ************/
+
+/*.container3 {
+}*/
+
+.container3 h1 {
+  color: #f2f2f2;
+  font-size: 50;
+  padding-left: 20px;
+}
+
+.mySlides2{
+  display:none;
+ }
+
+ .prev2, .next2{
+  cursor:pointer;
+  position:absolute;
+  top:50%;
+  width:auto;
+  margin-top:-140px;
+  padding:16px;
+  color:white;
+  font-weight:bold;
+  font-size:18px;
+  transition:0.50s ease;
+  border-radius:0 3px 3px 0;
+ }
+
+ .next2{
+  right:0;
+  border-radius:3px 0 0 3px;
+ }
+
+.topImg{
+  width: 30cm;
+
+}
+
+.boxTop{
+  background-color: rgba(0, 0, 0, 0.548);
+  text-align: center;
+
+}
+
+
+.filter_movies { grid-area: filter_movies;}
+
+.container_all_filters {
+  background-color:rgba(0, 0, 0, 0.548);
+  height: 50px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search {
+  width: 400px;
+  font-size: 16px;
+  border-radius: 20px;
+  border-color: #008CBA;
+  border-width: 5px;
+}
+
+.box_filters{
+  display: flex;
+  align-items: center;
+}
+
+.data_filters{
+  width: 200px;
+  font-size: 16px;
+  border-radius: 20px;
+  border-color: #008CBA;
+  border-width: 5px;
+
+}
+
+.button_alfabet{
+  height: 40px;
+}
+
+.box_filter_by{
+  margin: 8px;
+}
+
+.all_movies { grid-area: all_movies; }
+
+
+
+/***************** PAGE GAMES ********************/
+
+.container6 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "gameOne gameOne gameTwo gameTwo"
+    "gameOne gameOne gameTwo gameTwo"
+    "gameOne gameOne gameTwo gameTwo";
+}
+
+.gameOne {
+  grid-area: gameOne;
+  text-align: center;
+  padding: 15px;
+  margin: 50px;
+}
+
+.gameTwo {
+  grid-area: gameTwo;
+  text-align: center;
+  padding: 15px;
+  margin: 50px;
+ }
+
+ .gameOne p{
+   text-align: justify;
+   padding: 15px;
+ }
+
+ .gameOne ul  li{
+  text-align: justify;
+  padding-right: 15px;
+ }
+
+.boxGame1,
+.boxGame2{
+  background-color: rgb(0 0 0 / 60%);
+  margin-top: 20px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #2e696f;
+  border-width: 5px;
+  color: white;
+}
+
+.imgGame1{
+  text-align: center;
+}
+
+.imgGame{
+  width: 400px;
+  border-radius: 10px;
+  border-style: solid;
+}
+
+.button_play{
+  background-color: #008CBA;
+  border-radius: 10px;
+  color: white;
+  margin: 30px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+  width: 200px;
+  height: 100px;
+}
+
+.gameTwo p{
+  text-align: justify;
+  padding: 15px;
+}
+
+.gameTwo ul  li{
+ text-align: justify;
+ padding-right: 15px;
+}
