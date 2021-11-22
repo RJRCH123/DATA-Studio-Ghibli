@@ -103,7 +103,7 @@ function showMore(id) {
   boxLocation.innerHTML = "";
 
   if(dataLocation.length==0){
-    boxLocation.innerHTML = `<p>No Data</p>`;
+    boxLocation.innerHTML = `<p>NOT FOUND DATA</p>`;
   }else{
     for (let key in dataLocation){
         const locationElement = document.createElement('div');
@@ -132,7 +132,7 @@ function showMore(id) {
       const dataVehicles = dataFilm[0].vehicles;
       boxVehicles.innerHTML = "";
       if(dataVehicles.length== 0){
-        boxVehicles.innerHTML =`<p>No Data</p>` ;
+        boxVehicles.innerHTML =`<p class:"noData">NOT FOUND DATA</p>` ;
       } else  {
           for(let key in dataVehicles){
               const vehiclesElement = document.createElement('div');

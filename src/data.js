@@ -61,5 +61,5 @@ export {
   filterByProducer, 
   filterBySearch, 
   order_az, 
-  order_za 
+  order_za
 } 
