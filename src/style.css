@@ -28,6 +28,21 @@ body {
   /* overflow: hidden; */
 }
 
+/************** SCROLL **************/
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: rgba(0, 0, 0, 0.993);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.795);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0f5f5faf;
+  border-radius: 10px;
+}
 /************* NAVS HEADER **************/
 
 .audioSG {
@@ -192,22 +207,6 @@ body {
     transform-origin: center;
   }
 
-}
-
-/************** SCROLL **************/
-
-::-webkit-scrollbar {
-  width: 10px;
-  background: rgba(0, 0, 0, 0.993);
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.795);
-}
-
-::-webkit-scrollbar-thumb {
-  background: #0f5f5faf;
-  border-radius: 10px;
 }
 
 /************** PAGES **************/
@@ -1646,7 +1645,9 @@ div.redTable {
   padding: 5% 10%;
   background-color: #000000a1;
   margin: 5% 0;
-  width: 351px;
+  /* width: 351px;
+  height: 329px; */
+  width: 100%;
   height: 329px;
   overflow-y: scroll;
 }
@@ -1706,7 +1707,7 @@ div.redTable {
 
 .cards-Characters {
   background-color: #000000a1;
-  width: 822px;
+  width: 100%;
   height: 445.5px;
   overflow-y: scroll;
   box-shadow: 3px 3px 18px 3px rgb(15 35 48 / 91%);
