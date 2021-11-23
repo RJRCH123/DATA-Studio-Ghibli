@@ -1399,7 +1399,6 @@ div.redTable {
     border-top-color: rgb(29 88 126);
     border-bottom-color: rgb(7 56 68);
     border-radius: 5px;
-    color: rgb(255, 255, 255);
     text-align: center;
     text-overflow: clip;
     background: rgb(22 90 96);
@@ -1417,6 +1416,11 @@ div.redTable {
   margin: 5px 0 10px;
   -webkit-box-shadow: 0 1px 10px 1px rgb(92,139,238) inset, 0 1px 0 0 rgb(29,44,77) , 0 2px 0 0 rgb(31,48,83) , 0 4px 3px 0 rgb(17,17,17) ;
   box-shadow: 0 1px 10px 1px rgb(92,139,238) inset, 0 1px 0 0 rgb(29,44,77) , 0 2px 0 0 rgb(31,48,83) , 0 4px 3px 0 rgb(17,17,17) ;
+}
+
+.button_play a {
+  text-decoration: none;
+  color: beige;
 }
 
 @media (max-width: 768px) {
