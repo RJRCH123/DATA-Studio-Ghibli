@@ -1215,7 +1215,7 @@ div.redTable {
 .ContainerStaditics {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr;
   grid-auto-columns: 1fr;
   grid-auto-flow: row;
   justify-content: center;
@@ -1858,5 +1858,15 @@ text-align: center;
     align-items: center;
     padding: 10% 8%;
   }
+}
+
+
+/************* CHARTS ************/
+
+#ChartCh,
+#ChartG {
+  width: 100%;
+  height: 100%;
+  margin: 5%;
 }
 
