@@ -658,20 +658,22 @@
           <div class="Chart1">
             <br>
             <p>Location Type</p>
+            <br>
           </div>
           <div class="Chart2">
             <br>
             <p>Ranking Score</p>
+            <br>
           </div>
           <div class="Chart3">
             <br>
             <p>Characters per Gender</p>
-            <canvas id="ChartG"></canvas>
+            <br>
           </div>
           <div class="Chart4">
             <br>
             <p>Characters per Movie</p>
-            <canvas id="ChartCh"></canvas>
+            <br>
           </div>
         </div>
       </section>
@@ -846,75 +848,6 @@
     </script>    
     <script src="main.js" type="module"></script>
     <script src="data/ghibli/ghibli.js" type="module"></script>
-    <script>
-      /************* CHARTS ***************/
-
-      var ctx=document.getElementById("ChartG").getContext("2d");
-      var ChartGender= new Chart(ctx.{
-        type: "pie",
-        data: {
-          labels: ['NA','Female','Male'],
-          datasets:[{
-            label: 'Num datos',
-            data:[3,81,87],
-            backgroundColor:[
-              'rgba(54, 162, 235, 0.3)',
-              'rgb(163, 207, 43, 0.3)',
-              'rgba(75, 192, 192, 0.3)'
-            ]
-          }]
-        },
-        options:{
-          escales:{
-            yAxes:[{
-              tics:{
-                beginAtZero:true
-              }
-            }]
-          }
-        }
-      });
-    </script>
-    <script type="module">
-      import dataScore from './modulo1.js'
-        function totalCasesChar(ctx) {
-          new Chart(ctx, {
-            type: 'bar',
-            data: {
-              labels: dataScore.movies.map(item => item.Film),
-              datasets: [
-                {
-                  label: "Data Character for movie",
-                  data: dataScore.movies.map(item => item.totalCharacters),
-                  backgroundColor: [
-                    'rgb(110, 212, 250, 0.3)',
-                    'rgba(54, 162, 235, 0.3)',
-                    'rgb(163, 207, 43, 0.3)',
-                    'rgba(75, 192, 192, 0.3)'
-                  ],
-                  borderColor: [
-                    'rgb(110, 212, 250, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgb(163, 207, 43, 6)',
-                    'rgba(75, 192, 192, 1)'
-                  ],
-                  borderWidth: 1
-                }
-              ]
-            },
-            options:{
-              indexAxis: 'y',
-              responsive: true,
-              maintainAspecRatio: false,
-            }
-          })
-        }
-        function renderCharts() {
-          const ctx = document.querySelector('#ChartCh').getContext('2d');
-          totalCasesChar(ctx)
-        }
-        renderCharts();
-    </script>
   </body>
 
 </html>
