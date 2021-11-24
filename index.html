@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Studio Ghibli Portal</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/Favicon/StudioGL2.ico">
+    <link rel="stylesheet" href="style.css" />
+    <link async href="http://fonts.googleapis.com/css?family=Warnes" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+    <link async href="http://fonts.googleapis.com/css?family=Coda" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.js" integrity="sha512-CWVDkca3f3uAWgDNVzW+W4XJbiC3CH84P2aWZXj+DqI6PNbTzXbl1dIzEHeNJpYSn4B6U8miSZb/hCws7FnUZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+
+
+
+    <header class="header">
+      <nav class="nav">
+        <a onclick="openPage('Home', this,'rgb(12 46 45 / 0%)')" id="OpenDefault">
+          <img class="logo" src="./img/StudioG/Logo/Studio_Ghibli_portal_logo.png" alt="Studio Ghibli Portal"></a>
+        <button class="NavToggle" area-label="Open menu" >
+          <img class="MenuBar" src="./img/Animaciones/Iconos/Menu.png" alt="Menu">
+        </button>
+        <ul class="nav-menu nav-menu_visible"  data-animation="center">
+          <li class="nav-menu-item">
+            <a class="nav-menu-link nav-link" onclick="openPage('Home', this,'rgb(12 46 45 / 0%)')">Home</a>
+          </li>
+          <li class="nav-menu-item">
+            <a class="nav-menu-link nav-link " onclick="openPage('AboutUs', this,'rgb(12 46 45 / 0%)')" >About us</a>
+          </li>
+          <li class="nav-menu-item">
+            <a  class="nav-menu-link nav-link" onclick="openPage('Films', this,' rgb(12 46 45 / 0%)')">Films</a>
+          </li>
+          <li class="nav-menu-item">
+            <a class="nav-menu-link nav-link" onclick="openPage('Awards', this, 'rgb(12 46 45 / 0%)')">Awards</a>
+          </li>
+          <li class="nav-menu-item">
+            <a class="nav-menu-link nav-link" onclick="openPage('Statistics', this,' rgb(12 46 45 / 0%)')">Statistics</a>
+          </li>
+          <li class="nav-menu-item">
+            <a class="nav-menu-link nav-link" onclick="openPage('Games', this, 'rgb(12 46 45 / 0%)')">Games</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <section id="Home" class="Box" >
+        <div class="ContainerWelcome">
+          <div class="BoxWelcome">
+            <img class="LogoWelcome" src="./img/StudioG/Logo/Studio_Ghibli_portal_logo.png" alt="Studio Ghibli">
+            <h1>WELCOME!</h1> <br>
+            <h3>WHAT WILL YOU FIND? <br> <br>
+              In this platform, Studio Ghibli, you can find information about its history, movies, news, statistics, games and more. Join us in this fantasy adventure to learn more about its work.</h3>
+              <br>
+              <h1>🔊</h1>
+              <!-- Poner atributo autoplay -->
+              <audio class="audioSG"  loop controls>
+                <source type="audio/mpeg" src="img/Umi No Mieru Machi Piano.mp3">
+                <source type="audio/ogg" src="./img/Kiki's Delivery Service - Umi No Mieru Machi Piano.ogg">
+                Tu navegador no es compatible con el audio de la página.
+              </audio>
+          </div>
+
+          <div class="BoxSlider">
+            <!-- Slideshow container -->
+            <br> <br> <br>
+            <div class="slideshow-container">
+              <div class="mySlides fade">
+                <div class="numbertext">
+                  <h1>The Simpsons made a beautiful tribute to Studio Ghibli and My Neighbor Totoro</h1> <br>
+                  The first time The Simpsons paid homage to Studio Ghibli and Miyazaki was in 2014 in Kumiko's introductory chapter "Married to the Blob," in which Homer, Jeff, and Kumiko's father get drunk together in a Japanese bar, and Upon leaving, they enter a fantasy world set in the universe of Ghibli movies...
+                  <a href="https://codigoespagueti.com/noticias/cultura/los-simpson-homenaje-a-studio-ghibli-y-mi-vecino-totoro/" target="_blank">See more</a>
+                </div>
+                <img src="./img/Animaciones/Noticias/Noticia1.png" style="width:100%">
+                <div class="text">SG News</div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">
+                  <h1>Studio Ghibli to launch a pack with some of its films and shorts films in Japan</h1> <br>
+                  The most curious thing of all is that the feature films included pay tribute to other directors of the studio, beyond Hayao Miyazaki and Isao Takahata
+                  Hayao Miyazaki and Isao Takahata are two of the greatest geniuses in animation history, and parents of Studio Ghibli. However, Totoro's company has very good feature films beyond these two geniuses...
+                  <a href="https://areajugones.sport.es/anime/studio-ghibli-lanzara-en-japon-un-pack-con-algunas-de-sus-peliculas-y-cortos/" target="_blank">See more</a>
+                </div>
+                <img src="./img/Animaciones/Noticias/Noticia2.png" style="width:100%">
+                <div class="text">SG News</div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">
+                  <h1>Spirited Away Over 25 thousand viewers in its re-release</h1> <br>
+                  In the occasion of the 20th anniversary of the premiere of Spirited Away in Japan, on May 21st, Vertigo Films again brought this iconic Miyazaki film to Spanish cinemas. The film is one of the most acclaimed works of the Studi Ghibli, thanks to the Oscar obtained for best animated film...
+                  <a href="https://ramenparados.com/el-viaje-de-chihiro-supera-los-25-mil-espectadores-en-su-reestreno/" target="_blank">See more</a>
+                </div>
+                <img src="./img/Animaciones/Noticias/Noticia3.png" style="width:100%">
+                <div class="text">SG News</div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">
+                  <h1>Ghibli Park will build new stages</h1> <br>
+                  The Aichi government, where the future Ghibli Park will be located, has confirmed that the Dondoko Forest area is being constructed. The area, with a theme based on the movie My Neighbor Totoro, was restructured with a new design that has been shown together with the announcement of the operation...
+                  <a href="https://ramenparados.com/el-parque-ghibli-construira-nuevos-escenarios/" target="_blank">See More</a>
+                </div>
+                <img src="./img/Animaciones/Noticias/Noticia4.png" style="width:100%">
+                <div class="text"><br> <br> SG News</div>
+              </div>
+              <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+
+          </div>
+        </div>
+      </section >
+      <section id="AboutUs" class="Box">
+        <div class="containerAbout">
+          <div class="BoxAbout1">
+
+            <h1>WHAT IS THE STUDIO GHIBLI?</h1> <br>
+            <p>
+              This small team of producers, spends years crafting each wonderful story, bringing tales of adventure, love, and friendship to life through thousands of hand-drawn paintings. From My Neighbor Totoro to Ponyo, each of these enchanting films allows viewers to immerse themselves in worlds of fantasy.
+            </p> <br>
+            <p>
+              <strong>Studio Ghibli </strong>was founded by the animator, director, producer, screenwriter, author, and manga artist <strong>Hayao Miyazaki</strong>; japanese film director <strong>Isao Takahata</strong>; and the producer <strong>Toshio Suzuki</strong>. In the last 46 years, they have created 20 feature films (and counting), in addition to several short films and television commercials.
+
+            </p>
+            <br>
+            <div class="FotoFund">
+              <img class="Fundadores" src="./img/Fundadores/TresFundadores2.jpg" alt="Hayao Miyazaki, Isao Takahata y Toshio Suzuki">
+            </div>
+            <br>
+            <h1>THE BEGINNINGS OF STUDIO GHIBLI</h1> <br>
+            <p>
+              Takahata and Miyazaki met in the 1960s when they were working for the Japanese animation studio <strong>Tôei Dôga</strong>. Although they collaborated for more than a decade, it was until
+              <strong>mid 80's</strong> They decided to start their own company. In 1985, with funding from the publishing house <strong>Tokuma Shoten, Takahata, Miyazaki y Suzuki</strong>  They founded Studio Ghibli, a small production studio in the suburbs of Tokyo.
+            </p> <br>
+            <p>
+              The <strong>first feature</strong>  film of this trio, was <strong>Nausicaä of the Valley of the Wind</strong>, a post-apocalyptic fantasy adventure based on a manga of the same name published by Miyazaki. Released under the name Tokuma Shoten, the film was a success and prompted the small team to begin their next production.
+            </p>
+          </div>
+
+          <div class="BoxAbout2">
+            <h1>WHY IS IT CALLED STUDIO GHIBLI?</h1>
+            <br>
+            <p>
+              The name <strong>“Ghibli”</strong>refers to the Italian word <em>"For the hot wind of the Sahara"</em>. The name is more than appropriate given that the study wanted <strong>"Give a new air to the anime industry"</strong>.
+              The filmmaker was inspired by the Caproni Ca.309 Ghibli, a surveillance aircraft that was designed in Italy during World War II.
+            </p>
+            <br>
+            <h1>REVIEW OF THE FOUNDERS OF STUDIO GHIBLI</h1> <br>
+          </div>
+          <div class="BoxFounder1">
+            <img src="./img/Fundadores/Takohata/TakahataC.png" alt="Isao Takahata">
+          </div>
+          <div class="BoxFounder2">
+            <img src="./img/Fundadores/Miyazaqui/MiyasakiC.png" alt="Hayao Miyasaki">
+          </div>
+          <div class="BoxFounder3">
+            <img src="./img/Fundadores/Toshio/ToshioC.png" alt="Toshio Susuki">
+          </div>
+          <div class="BoxFounderText1">
+            <h1>ISAO TAKAHATA</h1>
+            <h3>(1935 - 2018)</h3>
+            <p>
+              He was a <strong> director, producer and screenwriter </strong> of Japanese animated films and series. His most recognized works were:
+            </p>
+              <ul>
+                <li type="square">Heidi, the girl from the Alps (1974),</li>
+                <li type="square">Marco (1976),</li>
+                <li type="square">The fireflies's grave (1988),</li>
+                <li type="square">Memories of yesterday (1991),</li>
+                <li type="square">The Tale of Princess Kaguya (2013)</li>
+              </ul>
+          </div>
+          <div class="BoxFounderText2">
+            <h1>HAYAO MIYASAKI</h1>
+            <h3>(1941)</h3>
+            <p>
+              He is a <strong> animated film director, animator, illustrator, mangaka </strong>, and internationally renowned Japanese anime producer with a career spanning five decades. <br> He has been compared to <strong> Walt Disney, Steven Spielberg or Orson Welles </strong>. Among his most popular animated films are titles such as:
+            </p>
+              <ul>
+                <li type="square"><strong>"Spirited Away";</strong></li>
+              </ul>
+              <p>
+                That surpassed the box office income of Japan and <strong> surpassed the success obtained by Titanic (2001)</strong>.
+              </p>
+
+          </div>
+          <div class="BoxFounderText3">
+            <h1>TOSHIO SUZUKI</h1>
+            <h3>(1948)</h3>
+            <p>
+              He is a <strong> anime film producer </strong> and graduated with a degree in literature <br> His most recognized works were:
+            </p>
+              <ul>
+                <li type="square">The Nausicaä manga of the Valley of the Wind (1974),</li>
+                <li type="square">Mamoru Oshii, The Angel's Egg (1985),</li>
+                <li type="square">The fireflies's grave (1988),</li>
+                <li type="square">My neighbor Totoro (1988), </li>
+                <li type="square">Memories of yesterday (1991),</li>
+                <li type="square">Porco Rosso (1992), </li>
+                <li type="square">Princess Mononoke (1997)</li>
+              </ul>
+          </div>
+        </div>
+        <div style="text-align: center;"  class="Totorosmini">
+          <img  style="width: 30%;" src="./img/Animaciones/Totoro/png/Totorosmini.png">
+        </div>
+      </section>
+
+      <section id="Films" class="Box">
+        <div class="ContainerFilms" id="BoxFilm-1">
+          <div class="Top10text">
+            <h1>TOP 10</h1>
+          </div>
+
+          <div id="BoxSliderTop" class="BoxSliderTop">
+            <img class="Top10sr" src="./img/Top/Top10sr.gif" alt="Top10">
+            <img class="Top10cr" src="./img/Top/Top10cr.gif" alt="Top10">
+          </div>
+
+          <section class="BoxFilmFilter">
+            <h1>ALL FILMS</h1>
+            <div class="container_all_filters">
+              <div class="box_search">
+                <input type="search" class="search input-data" id="searchFilm" placeholder=" 🔍 Search for movies..." autocomplete="off">
+              </div>
+
+              <div class="box_filters">
+                <div class="box_filter_by">
+                  <select name="directors" class="data_filters" id="directors">
+                    <option value="directors" selected="selected">By directors</option>
+                    <option value="Hayao Miyazaki" class="directorHayao ">Hayao Miyazaki</option>
+                    <option value="Isao Takahata" class="directorIsao " >Isao Takahata</option>
+                    <option value="Yoshifumi Kondō" class="directorYoshifumi " >Yoshifumi Kondō</option>
+                    <option value="Hiromasa Yonebayashi" class="directorHiromasa ">Hiromasa Yonebayashi</option>
+                    <option value="Gorō Miyazaki" class="directorGoro ">Gorō Miyazaki</option>
+                    <option value="Hiroyuki Morita" class="directorHiroyuki ">Hiroyuki Morita</option>
+                  </select>
+                </div>
+
+                <div class="box_filter_by">
+                  <select name="producers"  class="data_filters" id="producers">
+                    <option value="producers" selected="selected">By producers</option>
+                    <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+                    <option value="Isao Takahata">Isao Takahata</option>
+                    <option value="Toru Hara">Toru Hara</option>
+                    <option value="Toshio Suzuki">Toshio Suzuki</option>
+                    <option value="Yoshiaki Nishimura">Yoshiaki Nishimura</option>
+                  </select>
+                </div>
+
+                <div class="box_filter_by">
+                  <select name="score" class="data_filters"  id="score">
+                    <option value="score" selected="selected">By score ⭐️</option>
+                    <option value="100">100⭐️</option>
+                    <option value="97">97⭐️</option>
+                    <option value="96">96⭐️</option>
+                    <option value="95">95⭐️</option>
+                    <option value="94">94⭐️</option>
+                    <option value="93">93⭐️</option>
+                    <option value="92">92⭐️</option>
+                    <option value="91">91⭐️</option>
+                    <option value="89">89⭐️</option>
+                    <option value="87">87⭐️</option>
+                    <option value="83">83⭐️</option>
+                    <option value="78">78⭐️</option>
+                    <option value="75">75⭐️</option>
+                    <option value="41">41⭐️</option>
+                  </select>
+                </div>
+
+                <div class="box_filter_by">
+                  <select name="year" class="data_filters"  id="year">
+                    <option value="year" selected="selected">By year 📆</option>
+                    <option value="2014">2014 📆</option>
+                    <option value="2013">2013 📆</option>
+                    <option value="2011">2011 📆</option>
+                    <option value="2010">2010 📆</option>
+                    <option value="2008">2008 📆</option>
+                    <option value="2006">2006 📆</option>
+                    <option value="2004">2004 📆</option>
+                    <option value="2002">2002 📆</option>
+                    <option value="2001">2001 📆</option>
+                    <option value="1999">1999 📆</option>
+                    <option value="1997">1997 📆</option>
+                    <option value="1994">1994 📆</option>
+                    <option value="1992">1992 📆</option>
+                    <option value="1991">1991 📆</option>
+                    <option value="1989">1989 📆</option>
+                    <option value="1988">1988 📆</option>
+                    <option value="1986">1986 📆</option>
+                  </select>
+                </div>
+
+                <div class="Order_Alfabetic">
+                <div class="box_filter_by">
+                  <input type="image" class="button_alfabet"  id="order_az" src="./img/Animaciones/Iconos/A-Z.png">
+                </div>
+
+                <div class="box_filter_by">
+                  <input type="image" class="button_alfabet"  id="order_za" src="./img/Animaciones/Iconos/Z-A.png">
+                </div>
+              </div>
+              </div>
+            </div>
+            <section id="cards_movies" class="cards_movies">
+              <!-- Aquí van los cards -->
+            </section>
+
+            <div class="ghibli-notFound" id="ghibli-notFound">
+              <h1 class="notF">Sorry, Not Found
+                <br> <br>
+                <img src="./img/Animaciones/Totoro/png/Totoro3.png" alt="notFound-img" class="img-not-found">
+              </h1>
+            </div>
+          </section>
+        </div>
+
+        <!-- Page Film-2 -->
+        <div class="Film-2" id="BoxFilm-2" style="display: none;">
+          <div class="sinopsis">
+            <div class="buttonBack">
+              <input type="image" id="buttonBack" onclick="showAndHide()" src="./img/Animaciones/Iconos/Back.png" alt="back">
+            </div>
+            <div class="mainPoster">
+              <img id="PosterF2" alt="Poster">
+            </div>
+            <div class="descriptionF">
+              <div class="Flexline1" >
+                <div class="Tittlemain">
+                  <h1 class="tittleF2"></h1>
+                  <h3 class="dateF2" ></h3>
+                </div>
+                <div class="starMain">
+                  <h4 class="scoreF2"></h4>
+                  <img src="./img/Animaciones/Iconos/Star.png" alt="Star">
+                </div>
+              </div>
+              <div class="Flexline2">
+                <p id="synopsisF2" ></p>
+              </div>
+              <div class="Flexline3">
+                <div class="boxAuthors">
+                  <p>Director: <span class="span-name" id="directorF2"></span> </p>
+                  <p>Producer: <span class="span-name"  id="producerF2"></span></p>
+                </div>
+                <div class="boxTime">
+                  <p>Time: <span class="span-name" id="duration"></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="details">
+            <div class="locals-vehicles">
+              <div class="locations" >
+                <div>
+                  <h1>LOCATIONS</h1>
+                </div>
+                <div class="img-location" id="box-location">
+                  <!-- cards of vehicles -->
+                </div>
+              </div>
+              <div class="vehicles" >
+                <div>
+                  <h1>VEHICLES</h1>
+                </div>
+                <div class="img-vehicles" id="box-vehicles">
+                  <!-- cards of vehicles -->
+                </div>
+              </div>
+            </div>
+
+            <div class="Characteres">
+              <div class="tittle-Charact">
+                <h1>CHARACTERES</h1>
+              </div>
+              <div class="cards-Characters" id="box-characters">
+                <!-- Aquí van las characters cards -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE AWARDS -->
+      <section id="Awards" class="Box">
+        <div class="ContainerAward">
+          <div class="BoxImg">
+            <img src="./img/Fundadores/Miyazaqui/Miyasaki-Terno.jpg" alt="Miyasaki recibiendo un Oscar">
+          </div>
+          <div class="BoxText2">
+            <br>
+            <h1>Hayao Miyazaki: Why didn't you want to receive your first Oscar?</h1>
+            <br>
+            <p>
+              Definitely, Studio Ghibli made its mark on world animated cinema with visually rich and symbolic productions. And, that recognition led him to be victorious in a large number of awards; However, Miyashiro was not a participant in the first recognition of the Oscars and the reason he said was the following:
+            </p> <br>
+            <div class="Cita">
+              <p>
+                <em>“The reason I didn't attend the Oscars was because I didn't want to visit a country that was bombing Iraq. At that time, my producer shut me up and wouldn't let me say that, but I don't see him around here today. By the way, he also shared that feeling."</em><br><strong><em>Hayao Miyasaki (2009)</em></strong>
+              </p>
+            </div>
+          </div>
+          <div class="BoxPremio">
+            <div class="tab">
+              <button class="tablinks" onmouseover="openCity(event, 'AwardHo')">Honorary Oscar</button>
+              <button class="tablinks" onmouseover="openCity(event, 'TopAward')">TOP 10 Awards</button>
+              <button class="tablinks" onmouseover="openCity(event, 'Statuites')"> Statuettes Obtained </button>
+            </div>
+
+            <div id="AwardHo" class="tabcontent">
+              <br>
+              <h3>OSCAR HONORED HAYAO MIYASAKI</h3>
+              <br>
+              <p>
+                On November 9, 2014, the Hollywood Academy presented the honorary Oscar to Maureen O'Hara, <strong> Hayao Miyazaki </strong>, Jean-Claude Carrière and Harry Belafonte, in an intimate gala in the Ray Dolby room, of the Hollywood and Highland Center. Miyazaki had a second chance to attend the Oscars in 2014, when he received an honorary award.
+              </p> <br>
+              <div style="text-align: center; padding: 1% 5%; font-size: small;">
+                <p>
+                  <em> “My wife says that I am a very lucky man. And I think <strong> I have been lucky because I have been able to participate in this era, with films made on paper and pencil. </strong> Another lucky fact is that my country has not had to go to war in the 50 years that I've been making movies. He has benefited from the war, but we have been lucky not to have had to go to fight ”</em>, he declared in his speech.
+                </p> <br>
+              </div>
+
+              <div class="Video1" >
+                <iframe width="70%" height="315px" src="https://www.youtube.com/embed/9ZIG14mxB9w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+
+            <div id="TopAward" class="tabcontent">
+              <br>
+              <h3>TOP 10 AWARDS</h3>
+              <br>
+              <p>
+                Studio Ghibli, with the passing of time, was acquiring greater recognition and therefore they were acquiring a long list of nominations and awards. So far (2021) they have accumulated <strong> more than 30 statuettes </strong>. Next, we will show 10 of the prizes obtained.
+              </p>
+              <br>
+              <div class="divTable redTable">
+                <div class="divTableHeading">
+                  <div class="divTableRow">
+                    <div class="divTableHead">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Award</span></span>
+                    </div>
+                    <div class="divTableHead">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Year</span></span>
+                    </div>
+                    <div class="divTableHead">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Category</span></span>
+                    </div>
+                    <div class="divTableHead">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Film</span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="divTableBody">
+                  <div class="divTableRow">
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Oscar´s</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="white-space: pre-wrap;">2002</span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+                        Best animated film</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="white-space: pre-wrap;">Spirited Away</span>
+                    </div>
+                  </div>
+                  <div class="divTableRow">
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Japanese Academy</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="white-space: pre-wrap;">1998</span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Best film</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="white-space: pre-wrap;">Princess mononoke</span>
+                    </div>
+                  </div>
+                  <div class="divTableRow">
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Japanese Academy</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">2008</span></span>
+                    </div>
+                    <div div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Best animated film</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="white-space: pre-wrap;">Gake no ue no Ponyo</span>
+                    </div>
+                  </div>
+                  <div class="divTableRow">
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Film Criticism </span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">2002</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Best animated film</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="white-space: pre-wrap;">Spirited Away</span>
+                    </div>
+                  </div>
+                  <div class="divTableRow">
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Saturn</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">2002</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Best animated film</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="white-space: pre-wrap;">Spirited Away</span>
+                    </div>
+                  </div>
+                  <div class="divTableRow">
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Satellite Awards</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">2013</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Best animated film</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="white-space: pre-wrap;">Kaze Tachinu</span>
+                    </div>
+                  </div>
+                  <div class="divTableRow">
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Annie Awards</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">2013</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Best screenplay</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="white-space: pre-wrap;">Kaze Tachinu</span>
+                    </div>
+                  </div>
+                  <div class="divTableRow">
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">F.I.C. Berlín</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">2002</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Best Festival Film</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="white-space: pre-wrap;">Spirited Away</span>
+                    </div>
+                  </div>
+                  <div class="divTableRow">
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+                        Venice cinema Awards</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">2005</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Golden Lion on the Run</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="white-space: pre-wrap;">Ponyo</span>
+                    </div>
+                  </div>
+                  <div class="divTableRow">
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Mainichi Cinema Awards</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">1988</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Best animation</span></span>
+                    </div>
+                    <div class="divTableCell">
+                      <span style="white-space: pre-wrap;">My neighbor Totoro</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="redTable outerTableFooter">
+                <div class="tableFootStyle">
+                  <div class="links">
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="Statuites" class="tabcontent">
+              <br>
+              <h3>Statuettes Obtained</h3>
+              <br>
+              <div class="ContainerStatuites">
+                <img src="/src/img/Premios2/Annie.png" alt="Annie Awards">
+                <img src="/src/img/Premios2/Berlin.png" alt="Berlín Awards">
+                <img src="/src/img/Premios2/CriticJ.png" alt="Japanese Academy Awards">
+                <img src="/src/img/Premios2/Critics.png" alt="Film Criticism Awards">
+                <img src="/src/img/Premios2/Mainichi.png" alt="Mainichi Awards">
+                <img src="/src/img/Premios2/Oscars.png" alt="Oscar's Awards">
+                <img src="/src/img/Premios2/Satellite.png" alt="Satellite Awards">
+                <img src="/src/img/Premios2/Saturn.png" alt="Saturn Awards">
+                <img src="/src/img/Premios2/Venecia.png" alt="Venecia Awards">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="Statistics" class="Box">
+        <div class="ContainerStaditics">
+          <div class="TittleSt">
+            <h1>STATISTICAL DATA</h1>
+            <p>About movie</p>
+            <br>
+          </div>
+          <div class="Chart1">
+            <p>Compare Awards</p>
+            <br>
+            <canvas id="myChart1" width="400" height="400"></canvas>
+          </div>
+          <div class="Chart2">
+            <p>Ranking Score</p>
+            <br>
+            <canvas id="myChart2" width="400" height="400"></canvas>
+          </div>
+          <div class="Chart3">
+            <p>Characters per gender</p>
+            <br>
+          <canvas id="myChart3" width="400" height="400"></canvas>
+          </div>
+          <div class="Chart4">
+            <p>Characters per movie</p>
+            <br>
+            <canvas id="myChart4" width="400" height="400"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section id="Games" class="Box">
+
+        <div class="buttonG">
+          Studio Ghibli <br> Games
+        </div>
+        <div class="ContainerGame">
+          <div class="Game1">
+            <br><h1> SHOW US HOW MUCH YOU KNOW 😄 </h1> <br>
+            <p>In this game, you can found a lot of question about "Studio Ghibli".
+              Show us your skills, after having read some of the data on this website.</p> <br>
+              <p>About the game:</p>
+                <ul>
+                  <li> They are questions, based on the data you will find here. You will be in advantage after reading a little.</li>
+                  <li> You have a limit of time for answer the questions. Do it in that range. </li>
+                </ul>
+                <div class="imgGame1">
+                  <br>
+                  <img class="imgGame1" src="./img/Animaciones/Totoro/png/Totorosmini2.png">
+                  <br>
+                </div> <br>
+                <button class="button_play"> <a target="_blank" href="https://rjrch123.github.io/QUIZ-Studio-Ghibli-/">PLAY</a></button>
+          </div>
+          <div class="Game2">
+            <br><h1> HOW FAST YOU CAN DO IT 🐭 </h1> <br>
+            <p> In this game will appear a little and sweet Totoro, and you have to try catch with the mouse!</p> <br>
+              <p>About the game:</p>
+                <ul>
+                  <li> The key is the patience and the pulse</li>
+                  <li> Don't give down in the first try, could be a little be dificult. When catch all the Totoros, you will have won. </li>
+                </ul>
+              <div class="imgGame2">
+                <br>
+                <img class="imgGame2" src="./img/Animaciones/Totoro/png/Totorosmini.png">
+                <br>
+              </div><br>
+              <button class="button_play"> <a target="_blank" href="https://rjrch123.github.io/GAME-Studio-Ghibli/">PLAY</a></button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="FlexFoot" >
+
+        <p>This Studio Ghibli Portal is not official. <br> Official social networks of Studio Ghibli: <br></p>
+        <a href="https://twitter.com/JP_GHIBLI"><img src="./img/RedesSociales/icons8-twitter-30.png" class="redSocial" alt="Twitter"></a>
+        <a href="https://www.instagram.com/ghibliarchives/"><img src="./img/RedesSociales/Instagram.png" class="redSocial" alt="Instagram"></a>
+        <a href="https://www.ghibli.jp/"><img src="./img/Favicon/StudioGL2.ico" class="redSocial" alt="Studio Ghibli"></a>
+      </section>
+      <section class="FlexFoot">
+
+      </section>
+      <section class="FlexFoot">
+        <div class="copyright">
+          <p>
+            The content of this website is for educational purposes <br><br><strong> Copyright © 2021 </strong><br>Lima-Perú
+          </p>
+        </div>
+      </section>
+      <section class="FlexFoot">
+
+      </section>
+      <section class="FlexFoot">
+        <p>Project carried out by:</p> <br>
+        <div id="participants">
+          <div class="logos">
+            <a href="https://github.com/jeanecvh"><img src="./img/RedesSociales/icons8-github-30.png" href="https://github.com/RJRCH123" class="redSocial" alt="Github"></a>
+            <a href="mailto:jeanellach@gmail.com"><img src="./img/RedesSociales/icons8-gmail-32.png" class="redSocial" alt="Gmail"></a>
+            <a href="https://twitter.com/futuradiabetica"><img src="./img/RedesSociales/icons8-twitter-30.png" class="redSocial" alt="Twitter"></a>
+            <a href="https://www.linkedin.com/in/jeanella-hugo-b32784129/"><img src="./img/RedesSociales/icons8-linkedin-30.png" class="redSocial" alt="LinkenIn"></a>
+            <p>Jeanella Hugo Ñiquen</p>
+          </div>
+          <div class="logos">
+            <a href="https://github.com/RJRCH123"><img src="./img/RedesSociales/icons8-github-30.png" href="https://github.com/RJRCH123" class="redSocial" alt="Github"></a>
+            <a href="mailto:rous9716@gmail.com"><img src="./img/RedesSociales/icons8-gmail-32.png" class="redSocial" alt="Gmail"></a>
+            <a href="https://twitter.com/rouseblues"><img src="./img/RedesSociales/icons8-twitter-30.png" class="redSocial" alt="Twitter"></a>
+            <a href="https://www.linkedin.com/in/rosamaria-rodriguez-6904a1191/"><img src="./img/RedesSociales/icons8-linkedin-30.png" class="redSocial" alt="LinkenIn"></a>
+            <p>Rosamaria Rodriguez</p>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script>
+
+      /******** PAGES CODE *********/
+
+      function openPage(pageName,elmnt,color) {
+        var i, Box, BoxNavs;
+        Box = document.getElementsByClassName("Box");
+        for (i = 0; i < Box.length; i++) {
+          Box[i].style.display = "none";
+        }
+        BoxNavs = document.getElementsByClassName("BoxNavs");
+        for (i = 0; i < BoxNavs.length; i++) {
+          BoxNavs[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+      }
+
+      // Obtenga el elemento con id = "OpenDefault" y haga clic en él
+      document.getElementById("OpenDefault").click();
+
+
+      /******** SLIDER CODE *********/
+
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+
+      /******** BOX AWARD CODE *********/
+
+      function openCity(evt, cityName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the link that opened the tab
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+      }
+
+      /*********** OCULTAR MOSTRAR ***********/
+
+      function showAndHide() {
+        var boxFilm1 = document.getElementById("BoxFilm-1");
+        var boxFilm2 = document.getElementById("BoxFilm-2");
+        if (boxFilm1.style.display === "none" && boxFilm2.style.display === "block") {
+          boxFilm1.style.display = "block";
+          boxFilm2.style.display = "none";
+        }
+      }
+
+    </script>
+    <script src="main.js" type="module"></script>
+    <script src="data/ghibli/ghibli.js" type="module"></script>
+  </body>
+</html>
+
+
+
+
