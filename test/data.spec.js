@@ -75,6 +75,23 @@ describe('filterByProducer', () => {
   });
 });
 
+/******** Compare strings *********/
+describe('compareStrings', () => {
+  it('is a function', () => {
+    expect(typeof compareStrings).toBe('function');
+  });
+
+  it('it should retun -1', () => {
+    expect(compareStrings('a','b')).toBe(-1);
+  });
+  it('it should retun 1', () => {
+    expect(compareStrings('b','a')).toBe(1);
+  });
+  it('it should retun 0', () => {
+    expect(compareStrings('b','b')).toBe(0);
+  });
+});
+
 /******** Filter by Alphabetic Az ********/
 describe('Sort from ascending order', () => {
   it('is a function order_az', () => {
@@ -99,19 +116,4 @@ describe('Sort descending order', () => {
   });
 });
 
-/******** Compare strings *********/
-describe('compareStrings', () => {
-  it('is a function', () => {
-    expect(typeof compareStrings).toBe('function');
-  });
 
-  it('it should retun -1', () => {
-    expect(compareStrings('a','b')).toBe(-1);
-  });
-  it('it should retun 1', () => {
-    expect(compareStrings('b','a')).toBe(1);
-  });
-  it('it should retun 0', () => {
-    expect(compareStrings('b','b')).toBe(0);
-  });
-});
