@@ -1,16 +1,48 @@
 /* eslint-disable no-undef */
-//import { filterByProducer , filterByDirector } from './data.js';
-//import {} from '.data/.js'
-// // import data from './data/lol/lol.js';
-// import data from './data/ghibli/ghibli.js';
-// // import data from './data/rickandmorty/rickandmorty.js';
 
-//console.log(data['films']);
+/********** DATA FILTER***********/
+import dataGhibli from './data/ghibli/ghibli.js';
+import { filterByDirector, 
+  filterByProducer, 
+  filterBySearch, 
+  order_az, 
+  order_za, 
+  filterByScore, 
+  filterByYear
+} from './data.js';
+// TEMPLATE
+const allData = dataGhibli.films;
 
 // Event for Nav-Menu responsive
 
-const navToggle = document.querySelector(".NavToggle")
-const navMenu = document.querySelector(".nav-menu")
+const navToggle = document.querySelector(".NavToggle");
+const navMenu = document.querySelector(".nav-menu");
+const cardsList = document.querySelector("#cards_movies");
+const selectDirector = document.querySelector("#directors");
+const selectProducer = document.querySelector("#producers");
+const inputTypeSearch = document.querySelector("input[type=search]");
+const ghibliNotFound = document.querySelector("#ghibli-notFound");
+let inputSearch = document.querySelector("#searchFilm");
+const selectScore = document.querySelector("#score");
+const selectYear = document.querySelector("#year");
+const film1 = document.querySelector("#BoxFilm-1")
+const film2 = document.querySelector("#BoxFilm-2")
+
+/**************SHOW MORE ITEMS PAGE FILM 2 *************/
+const titleF2 = document.querySelector(".tittleF2");
+const synopsisF2 = document.querySelector("#synopsisF2");
+const posterF2 = document.querySelector("#PosterF2");
+const yearF2 = document.querySelector(".dateF2");
+const scoreF2 = document.querySelector(".scoreF2");
+const directorF2 = document.querySelector("#directorF2");
+const producerF2 = document.querySelector("#producerF2");
+const durationMovie = document.querySelector("#duration");
+const boxLocation = document.querySelector("#box-location");
+const boxVehicles = document.querySelector("#box-vehicles");
+const boxCharacteres = document.querySelector("#box-characters");
+
+
+/********** BAR NAVEGATION ************/
 
 navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("nav-menu_visible");
@@ -23,14 +55,6 @@ if (navMenu.classList.contains("nav-menu_visible")){
   navToggle.setAttribute("aria-label", "Open menu")
 }
 });
-
-
-/********** DATA FILTER***********/
-import dataGhibli from './data/ghibli/ghibli.js';
-import { filterByDirector, filterByProducer, filterBySearch, order_az, order_za, filterByScore, filterByYear} from './data.js';
-// TEMPLATE
-const allData = dataGhibli.films;
-
 
 //const mainCards = document.querySelector("#Films");
 
@@ -59,31 +83,6 @@ const showData = (data) => {
     })
     return cardElement;
 }
-
-const cardsList = document.querySelector("#cards_movies");
-const selectDirector = document.querySelector("#directors");
-const selectProducer = document.querySelector("#producers");
-const inputTypeSearch = document.querySelector("input[type=search]");
-const ghibliNotFound = document.querySelector("#ghibli-notFound");
-let inputSearch = document.querySelector("#searchFilm");
-const selectScore = document.querySelector("#score");
-const selectYear = document.querySelector("#year");
-const film1 = document.querySelector("#BoxFilm-1")
-const film2 = document.querySelector("#BoxFilm-2")
-
-/**************SHOW MORE ITEMS PAGE FILM 2 *************/
-const titleF2 = document.querySelector(".tittleF2");
-const synopsisF2 = document.querySelector("#synopsisF2");
-const posterF2 = document.querySelector("#PosterF2");
-const yearF2 = document.querySelector(".dateF2");
-const scoreF2 = document.querySelector(".scoreF2");
-const directorF2 = document.querySelector("#directorF2");
-const producerF2 = document.querySelector("#producerF2");
-const durationMovie = document.querySelector("#duration");
-const boxLocation = document.querySelector("#box-location");
-const boxVehicles = document.querySelector("#box-vehicles");
-const boxCharacteres = document.querySelector("#box-characters");
-
 
 /************ FUNCTION SHOW MORE *************/
 
@@ -323,8 +322,6 @@ function renderGender1() {
   totalAwards(ctx)
 }
 renderGender1();
-
-
 
 function statisticsScore(ctx) {
   new Chart(ctx, {

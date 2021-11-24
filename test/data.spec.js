@@ -1,5 +1,13 @@
 
-import { filterByScore, filterByYear, filterByDirector, filterByProducer, filterBySearch, order_az, order_za, compareStrings } from '../src/data.js';
+import { filterByScore, 
+  filterByYear, 
+  filterByDirector, 
+  filterByProducer, 
+  filterBySearch, 
+  order_az, 
+  order_za, 
+  compareStrings 
+} from '../src/data.js';
 
 /******** Filter by Score ********/
 describe('filterByScore', () => {
@@ -91,7 +99,7 @@ describe('Sort descending order', () => {
   });
 });
 
-/********************** ******************/
+/******** Compare strings *********/
 describe('compareStrings', () => {
   it('is a function', () => {
     expect(typeof compareStrings).toBe('function');
