@@ -17,6 +17,27 @@ const filterBySearch = (search, allData) => {
   return dataFilterSearch;
 }
 
+/************ FILTER BY ALFABETIC *************/
+
+function compareStrings(a, b) {
+  a = a.toLowerCase();
+  b = b.toLowerCase();
+
+  return (a < b) ? -1 : (a > b) ? 1 : 0;
+}
+
+function order_az(arraytosort) {
+  return arraytosort.sort(function (a, b) {
+    return compareStrings(a.title, b.title);
+  });
+}
+
+const order_za = (arraytosort) => {
+  return arraytosort.sort(function(a, b) {
+    return compareStrings(b.title, a.title);
+})
+};
+
 /************ FILTER BY SCORE *************/
 
 const filterByScore = (rt_score, allData) => {
@@ -31,27 +52,6 @@ const filterByYear = (release_date, allData) => {
   return dataFilter;
 }
 
-/************ FILTER BY ALFABETIC *************/
-
-function compareStrings(a, b) {
-  a = a.toLowerCase();
-  b = b.toLowerCase();
-
-  return (a < b) ? -1 : (a > b) ? 1 : 0;
-}
-
-const order_az = (arraytosort) => {
-  return arraytosort.sort(function(a, b) {
-    return compareStrings(a.title, b.title);
-})
-};
-
-const order_za = (arraytosort) => {
-  return arraytosort.sort(function(a, b) {
-    return compareStrings(b.title, a.title);
-})
-};
-
 export {
   filterByDirector, 
   filterByProducer, 
@@ -59,5 +59,6 @@ export {
   order_az, 
   order_za, 
   filterByScore, 
-  filterByYear
+  filterByYear,
+  compareStrings 
 }

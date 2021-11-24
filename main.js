@@ -56,8 +56,6 @@ if (navMenu.classList.contains("nav-menu_visible")){
 }
 });
 
-//const mainCards = document.querySelector("#Films");
-
 const showData = (data) => {
     const cardElement = document.createElement('div');
     cardElement.className = "card";
