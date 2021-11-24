@@ -17,7 +17,6 @@
 body, html {
   height: 100%;
   margin: 0;
-
 }
 
 body {
@@ -1659,7 +1658,8 @@ div.redTable {
   margin: 5%;
 }
 
-.locals-vehicles { grid-area: locals-vehicles; }
+.locals-vehicles { 
+  grid-area: locals-vehicles; }
 
 .Characteres { grid-area: Characteres; }
 
@@ -1798,6 +1798,7 @@ div.redTable {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  align-items: center;
 }
 
 .text-name {
@@ -1845,17 +1846,24 @@ text-align: center;
     flex-direction: column;
     padding: 8%;
   }
+
+  .mainPoster{
+    display: flex;
+    justify-content: center;
+  }
   .mainPoster img {
-    padding: 0 20%;
-    width: 60%;
-    margin: 5%;
+    width: 70%;
+    margin: 5% 0 8% 0;
+    box-shadow: none;
+    display: flex;
+    border-width: 4px;
+    border-color: rgb(43 103 108);
+    border-style: solid;
   }
   .details,
   .Characteres {
     display: flex;
     flex-direction: column;
-    margin: 5%;
-    width: 351px;
   }
   .cards-Characters {
     display: grid;
@@ -1863,12 +1871,11 @@ text-align: center;
     grid-auto-rows: column;
     gap: 40px;
     place-content: center;
-    padding: 53% 8% 2% 8%;
+    align-items: center;
   }
   .cards-Characters {
   display: flex;
   flex-direction: column;
-  width: 351px;
   }
   .filter-Characters {
     display: flex;
@@ -1876,4 +1883,23 @@ text-align: center;
     align-items: center;
     padding: 10% 8%;
   }
+  .buttonBack input {
+    width: 8%;
+  }
+  .Flexline2 p {
+    margin: 2% 0;
+    text-align: justify;
+    font-size: small;
+}
+.img-character {
+  width: 200px;
+  height: 250px;
+}
+.divScoreYear {
+  font-size: small;
+}
+.directorClick,
+.producerClick{
+  font-size: x-small;
+}
 }
