@@ -1,5 +1,5 @@
 
-import { filterByScore, filterByYear, filterByDirector, filterByProducer, filterBySearch, order_az, order_za } from '../src/data.js';
+import { filterByScore, filterByYear, filterByDirector, filterByProducer, filterBySearch, order_az, order_za, compareStrings } from '../src/data.js';
 
 /******** Filter by Score ********/
 describe('filterByScore', () => {
@@ -76,7 +76,7 @@ describe('Sort from ascending order', () => {
   it('Should be sorted in ascending order', () => {
     const arrayToSort  = [{title:"Spirited Away"},{title: "My Neighbor Totoro"}];
     expect(order_az(arrayToSort)).toEqual([{title: "My Neighbor Totoro"},{title:"Spirited Away"}]);
-  }); 
+  });
 });
 
 /******** Filter by Alphabetic Za ********/
@@ -88,5 +88,22 @@ describe('Sort descending order', () => {
   it('Should be sorted in descending order', () => {
     const arrayToSort  = [{title:"Spirited Away"},{title: "Kiki's Delivery Service"}];
     expect(order_za(arrayToSort)).toEqual([{title: "Spirited Away"},{title:"Kiki's Delivery Service"}]);
-  }); 
+  });
+});
+
+/********************** ******************/
+describe('compareStrings', () => {
+  it('is a function', () => {
+    expect(typeof compareStrings).toBe('function');
+  });
+
+  it('it should retun -1', () => {
+    expect(compareStrings('a','b')).toBe(-1);
+  });
+  it('it should retun 1', () => {
+    expect(compareStrings('b','a')).toBe(1);
+  });
+  it('it should retun 0', () => {
+    expect(compareStrings('b','b')).toBe(0);
+  });
 });
