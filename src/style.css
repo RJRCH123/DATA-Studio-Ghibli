@@ -1020,7 +1020,6 @@ div.redTable {
   padding: 15% 0 15% 15%;
   border-radius: 20px;
   text-align: center;
-
 }
 
 .movie-poster{
@@ -1029,7 +1028,7 @@ div.redTable {
   border-width: 4px;
   border-color: rgb(43 103 108);
   height: 100%;
-  width: 80%;
+  width: 80%; 
   text-align: center;
 }
 
@@ -1064,6 +1063,10 @@ div.redTable {
   box-shadow: 3px 3px 18px 3px rgb(15 35 48 / 91%);
 }
 
+.filmClick1 {
+  display:none;
+}
+
 @media (max-width: 768px) {
 
   .cards_movies{
@@ -1092,8 +1095,26 @@ div.redTable {
     padding: 2% 5%;
     font-size: medium;
   }
-
-
+  .filmClick1 {
+    display:block;
+  }
+  .filmClick1 p {
+    color: beige;
+    font-size: small;
+  }
+  .filmClick1 h6 {
+    color:  #ffc911;
+    font-size: medium;
+  }
+  .numbertext {
+    line-height: 100%
+  }
+  .numbertext {
+    line-height: 100%
+  }
+  .numbertext h1{
+    line-height: 120%
+  }
 }
 
 .score{

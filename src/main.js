@@ -74,7 +74,13 @@ const showData = (data) => {
             <p class="directorClick">Director: ${data.director}</p>
             <p class="producerClick">Producer: ${data.producer}</p>
             </div>
-        </div>`;
+        </div>
+        <div class="filmClick1" > 
+        <h6>${data.title}</h6>
+        <p> ⭐️ ${data.rt_score}</p>
+        <p> 📆 ${data.release_date}</p>
+        </div> 
+        `;
 
     cardElement.innerHTML = templateCard;
     cardElement.addEventListener('click', () => {
