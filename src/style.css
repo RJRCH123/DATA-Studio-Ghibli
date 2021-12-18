@@ -730,7 +730,7 @@ div.redTable {
   background: linear-gradient(to bottom, #52645b 0%, #30453a 66%, #193125 100%);
 }
 .divTable.redTable .divTableHeading .divTableHead {
-  font-size: 19px;
+  font-size: small;
   font-weight: bold;
   color: #FFFFFF;
   text-align: center;

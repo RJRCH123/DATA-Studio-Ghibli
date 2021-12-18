@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 
-/********** DATA FILTER***********/
+/**************** IMPORT MODULES *******************/
 import dataGhibli from './data/ghibli/ghibli.js';
 import { filterByDirector, 
   filterByProducer, 
@@ -10,14 +10,17 @@ import { filterByDirector,
   filterByScore, 
   filterByYear
 } from './data.js';
-// TEMPLATE
+
+/**************************** DECLARATION OF VARIABLES  *****************************************/
+/********************* GET THE DATA***********************/
 const allData = dataGhibli.films;
 
-// Event for Nav-Menu responsive
-
-const navToggle = document.querySelector(".NavToggle");
-const navMenu = document.querySelector(".nav-menu");
+/************************TEMPLATE***********************/
 const cardsList = document.querySelector("#cards_movies");
+const film1 = document.querySelector("#BoxFilm-1")
+const film2 = document.querySelector("#BoxFilm-2")
+
+/************************FILTERS***********************/
 const selectDirector = document.querySelector("#directors");
 const selectProducer = document.querySelector("#producers");
 const inputTypeSearch = document.querySelector("input[type=search]");
@@ -25,8 +28,8 @@ const ghibliNotFound = document.querySelector("#ghibli-notFound");
 let inputSearch = document.querySelector("#searchFilm");
 const selectScore = document.querySelector("#score");
 const selectYear = document.querySelector("#year");
-const film1 = document.querySelector("#BoxFilm-1")
-const film2 = document.querySelector("#BoxFilm-2")
+let orderZtoA = document.getElementById("order_za");
+let orderAtoZ = document.getElementById("order_az");
 
 /**************SHOW MORE ITEMS PAGE FILM 2 *************/
 const titleF2 = document.querySelector(".tittleF2");
@@ -41,20 +44,8 @@ const boxLocation = document.querySelector("#box-location");
 const boxVehicles = document.querySelector("#box-vehicles");
 const boxCharacteres = document.querySelector("#box-characters");
 
-
-/********** BAR NAVEGATION ************/
-
-navToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("nav-menu_visible");
-
-// Event for area-label open and close menu
-
-if (navMenu.classList.contains("nav-menu_visible")){
-  navToggle.setAttribute("aria-label", "Close menu");
-}else {
-  navToggle.setAttribute("aria-label", "Open menu")
-}
-});
+/************************ TEMPLETE CARDS ********************/
+// FUNCION PARA OBTENER LOS CARDS + LLAMAR A FUNCION SHOW MORE PARA OBTENER LA PÁGINA PROPIA DE CADA FILM
 
 const showData = (data) => {
     const cardElement = document.createElement('div');
@@ -88,7 +79,22 @@ const showData = (data) => {
     return cardElement;
 }
 
-/************ FUNCTION SHOW MORE *************/
+
+// Funcion Cargar Data en Card
+function loadData(data) {
+  cardsList.innerHTML = '';
+  for (let key in data) {
+      cardsList.appendChild(showData(data[key]));
+  }
+}
+
+// Cargar Toda la Data al inicio
+window.addEventListener("load", () => {
+  loadData(allData);
+});
+
+/*********************** FUNCTION SHOW MORE ************************/
+// FUNCIÓN PARA REDIRECCIONAR A PÁGINA FILM 2 Y MOSTRAR CONTENIDO
 
 function showMore(id) {
 
@@ -191,29 +197,9 @@ function showMore(id) {
     film2.style.display='block';
     }
 
+/******************************* FILTROS PARA CARDS (PAGE FILM 1) **************************/
 
-
-
-// Funcion Cargar Data en Card
-function loadData(data) {
-    cardsList.innerHTML = '';
-    for (let key in data) {
-        cardsList.appendChild(showData(data[key]));
-    }
-}
-
-// Cargar Toda la Data al inicio
-window.addEventListener("load", () => {
-    loadData(allData);
-});
-
-//Reload Data when close "x" of search
-inputTypeSearch.addEventListener('search', () => {
-  loadData(allData);
-  ghibliNotFound.style.display = 'none';
-});
-
-//Filtrar by Search
+//Filter by Search (bar search)
 
 inputSearch.addEventListener('keyup', () => {
   let search = inputSearch.value;
@@ -231,9 +217,17 @@ inputSearch.addEventListener('keyup', () => {
   }
 });
 
+//Reload Data when close "x" of search
+inputTypeSearch.addEventListener('search', () => {
+  loadData(allData);
+  ghibliNotFound.style.display = 'none';
+});
 
 // Filter by Director
 selectDirector.addEventListener("change", () => {
+  selectProducer.value = "producers";
+  selectScore.value = "score";
+  selectYear.value = "year";
     let director = selectDirector.value;
     if (director == 'directors') {
         loadData(allData);
@@ -245,7 +239,10 @@ selectDirector.addEventListener("change", () => {
 
 // Filter by Producer
 selectProducer.addEventListener("change", () => {
-    let producer = selectProducer.value;
+  selectDirector.value = "directors";
+  selectScore.value = "score";
+  selectYear.value = "year";
+  let producer = selectProducer.value;
     if (producer == 'producers') {
         loadData(allData);
     } else {
@@ -254,24 +251,11 @@ selectProducer.addEventListener("change", () => {
     }
 });
 
-// Filter by alphabetical Az
-let orderAtoZ = document.getElementById("order_az");
-orderAtoZ.addEventListener("click", function () {
-  document.getElementsByClassName("cards_movies")[0].innerHTML = "";
-  order_az(allData);
-  loadData(allData);
-});
-
-// Filter by alphabetical Za
-let orderZtoA = document.getElementById("order_za");
-orderZtoA.addEventListener("click", function () {
-  document.getElementsByClassName("cards_movies")[0].innerHTML = "";
-  order_za(allData);
-  loadData(allData);
-});
-
 // Filter by Score
 selectScore.addEventListener("change", () => {
+  selectDirector.value = "directors";
+  selectProducer.value = "producers";
+  selectYear.value = "year";
   let score= selectScore.value;
   if (score == 'score') {
       loadData(allData);
@@ -283,6 +267,9 @@ selectScore.addEventListener("change", () => {
 
 // Filter by Year
 selectYear.addEventListener("change", () => {
+  selectDirector.value = "directors";
+  selectProducer.value = "producers";
+  selectScore.value = "score";
   let year= selectYear.value;
   if (year == 'year') {
       loadData(allData);
@@ -292,163 +279,19 @@ selectYear.addEventListener("change", () => {
   }
 });
 
+// Filter by alphabetical Az
+orderAtoZ.addEventListener("click", function () {
+  document.getElementsByClassName("cards_movies")[0].innerHTML = "";
+  order_az(allData);
+  loadData(allData);
+});
 
-/****************** ESTATISTICS **************/
-function totalAwards(ctx) {
-  new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: ['Awards winner','Awards nominated'],
-      datasets: [
-        {
-          label: "Data awards ",
-          data: [28,15],
-          backgroundColor: [
-            'rgba(75, 192, 192, 0.3)',
-            'rgba(153, 102, 255, 0.3)'
-          ],
-          borderColor: [
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)'
-          ],
-          borderWidth: 1
-        }
-      ]
-    },
-    options:{
-      responsive: true,
-      maintainAspecRatio: false,
-    }
-  })
-}
-function renderGender1() {
-  const ctx = document.querySelector('#myChart1').getContext('2d');
-  totalAwards(ctx)
-}
-renderGender1();
-
-function statisticsScore(ctx) {
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: dataGhibli.films.map(item => item.title),
-      datasets: [
-        {
-          label: "Data score for movie",
-          data: dataGhibli.films.map(item => item.rt_score),
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.3)',
-            'rgba(54, 162, 235, 0.3)',
-            'rgba(255, 206, 86, 0.3)',
-            'rgba(75, 192, 192, 0.3)',
-            'rgba(153, 102, 255, 0.3)'
-          ],
-          borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)'
-          ],
-          borderWidth: 1
-        }
-      ]
-    },
-    options:{
-      indexAxis: 'y',
-      responsive: true,
-      maintainAspecRatio: false,
-    }
-  })
-}
-function renderCharts2() {
-  const ctx = document.querySelector('#myChart2').getContext('2d');
-  statisticsScore(ctx)
-}
-renderCharts2();
-
-
-function totalGender(ctx) {
-  new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: ['Female','Male','NA'],
-      datasets: [
-        {
-          label: "Data Character for movie",
-          data: [81,87,3],
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.3)',
-            'rgba(54, 162, 235, 0.3)',
-            'rgba(255, 206, 86, 0.3)',
-            'rgba(75, 192, 192, 0.3)',
-            'rgba(153, 102, 255, 0.3)'
-          ],
-          borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)'
-          ],
-          borderWidth: 1
-        }
-      ]
-    },
-    options:{
-      responsive: true,
-      maintainAspecRatio: false,
-    }
-  })
-}
-function renderGender3() {
-  const ctx = document.querySelector('#myChart3').getContext('2d');
-  totalGender(ctx)
-}
-renderGender3();
-
-
-function totalCharacters (ctx) {
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: dataGhibli.films.map(item => item.title),
-      datasets: [
-        {
-          label: "Data Character for movie",
-          data: [13,10,6,5,11,8,6,9,10,5,10,9,10,8,10,8,8,8,8,10],
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.3)',
-            'rgba(54, 162, 235, 0.3)',
-            'rgba(255, 206, 86, 0.3)',
-            'rgba(75, 192, 192, 0.3)',
-            'rgba(153, 102, 255, 0.3)'
-          ],
-          borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)'
-          ],
-          borderWidth: 1
-        }
-      ]
-    },
-    options:{
-      indexAxis: 'y',
-      responsive: true,
-      maintainAspecRatio: false,
-    }
-  })
-}
-function renderCharts4() {
-  const ctx = document.querySelector('#myChart4').getContext('2d');
-  totalCharacters(ctx)
-}
-renderCharts4();
-
-
+// Filter by alphabetical Za
+orderZtoA.addEventListener("click", function () {
+  document.getElementsByClassName("cards_movies")[0].innerHTML = "";
+  order_za(allData);
+  loadData(allData);
+});
 
 
 
