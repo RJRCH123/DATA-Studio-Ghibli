@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+
 import dataGhibli from './data/ghibli/ghibli.js';
 
 /*********************************** ESTATISTICS *******************************/
