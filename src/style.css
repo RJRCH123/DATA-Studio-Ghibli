@@ -68,9 +68,9 @@ body {
 }
 
 .nav-menu {
-  display: flex;
-  margin-right: 40px;
-  list-style: none;
+  display: flex; 
+  /* margin-right: 48%; */
+  list-style: none; 
 }
 
 .nav-menu-item {
@@ -120,20 +120,20 @@ body {
 
   .nav-menu {
     flex-direction: column;
-    align-items: center;
+    display: flex;
     list-style: none;
     background-color: rgb(15 25 29);
     position: absolute;
-    left: 0;
+    right: 0;
     top: 60px;
-    width: 100%;
-    padding: 20px 0;
-    height: calc(100% - 60px);
+    /* width: 100%; */
+    /* padding: 20px 0; */
+    /* height: calc(100% - 60px); */
     overflow-y: auto;
-    left: 100%;
-    transition: left 0.3s;
+    right: 100%;
+    transition: right 0.3s;
     z-index: 5;
-    padding: 10% 0% 0% 10.7%;
+    /* padding: 10% 0% 0% 10.7%; */
   }
 
   .nav-menu-item {
@@ -152,7 +152,7 @@ body {
   }
 
   .nav-menu_visible {
-    left: 0;
+    right: 0;
   }
 
   .MenuBar {
@@ -718,7 +718,7 @@ div.redTable {
   padding: 3px 2px;
 }
 .divTable.redTable .divTableBody .divTableCell {
-  font-size: 13px;
+  font-size: xx-small;
 }
 .divTable.redTable .divTableRow:nth-child(even) {
   background: #C8DBCE;
@@ -1797,8 +1797,6 @@ div.redTable {
 .filter-Gender option{
   background: #5d7b63;
 }
-
-
 
 .img-character-box {
   margin: 5%;
