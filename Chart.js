@@ -1,5 +1,4 @@
 /* eslint-disable no-undef */
-
 import dataGhibli from './data/ghibli/ghibli.js';
 
 /*********************************** ESTATISTICS *******************************/
@@ -35,7 +34,7 @@ function totalAwards(ctx) {
 }
 // Llamando desde el DOM
 function renderGender1() {
-  const ctx = document.querySelector('#myChart1').getContext('2d');
+  const ctx = document.getElementById('myChart1').getContext('2d');
   totalAwards(ctx)
 }
 
@@ -76,7 +75,7 @@ function statisticsScore(ctx) {
 }
 // Llamando desde el DOM
 function renderCharts2() {
-  const ctx = document.querySelector('#myChart2').getContext('2d');
+  const ctx = document.getElementById('myChart2').getContext('2d');
   statisticsScore(ctx)
 }
 
@@ -117,7 +116,7 @@ function totalGender(ctx) {
 }
 // Llamando desde el DOM
 function renderGender3() {
-  const ctx = document.querySelector('#myChart3').getContext('2d');
+  const ctx = document.getElementById('myChart3').getContext('2d');
   totalGender(ctx)
 }
 
@@ -159,7 +158,7 @@ function totalCharacters (ctx) {
 }
 // Llamando desde el DOM
 function renderCharts4() {
-  const ctx = document.querySelector('#myChart4').getContext('2d');
+  const ctx = document.getElementById('myChart4').getContext('2d');
   totalCharacters(ctx)
 }
 
