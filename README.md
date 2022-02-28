@@ -1,3 +1,4 @@
+![](https://komarev.com/ghpvc/?username=StudioGhibli&color=yellow)
 
 ## ÍNDICE
 * [1. Studio Ghibli](#1-Srudio-Ghibli )
